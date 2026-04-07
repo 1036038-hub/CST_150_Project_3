@@ -1,0 +1,1 @@
+// checks checkout form inputs for validity and displays error messages if needed
