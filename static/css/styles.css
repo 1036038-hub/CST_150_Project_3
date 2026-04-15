@@ -59,7 +59,7 @@ body {
     padding: 8px 0 0;
 }
 
-.loginPage #loginForm input[type="email"],
+.loginPage #loginForm input[type="text"],
 .loginPage #loginForm input[type="password"] {
     /* Improves readability and tap targets in auth inputs. */
     width: 100%;
@@ -67,7 +67,7 @@ body {
     color: #f8e2fc;
 }
 
-.loginPage #loginForm input[type="email"]::placeholder,
+.loginPage #loginForm input[type="text"]::placeholder,
 .loginPage #loginForm input[type="password"]::placeholder {
     /* Soft placeholder color to reduce visual noise. */
     color: rgba(0, 0, 0, 0.72);

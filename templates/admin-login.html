@@ -8,10 +8,20 @@
 
         <div class="authCard">
 
-            <form id="loginForm">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="flashMessages">
+                {% for category, message in messages %}
+                <p class="flash {{ category }}">{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+
+            <form id="loginForm" method="post" action="{{ url_for('login') }}">
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="name@email.com">
+                <input type="text" id="username" name="username" required placeholder="Username">
 
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" minlength="8" required
